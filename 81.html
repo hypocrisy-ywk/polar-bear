@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        .bg{
+            position: relative;
+            top:100px;
+            height:500px;
+            background:url('./image3/bg.png') no-repeat;
+            animation: bg 50s linear infinite;
+        }
+        .bg .xiongda{
+            position:absolute;
+            width: 200px;
+            height: 100px;
+            top:220px;
+            background:url('./image3/xiongda.png') no-repeat;
+            animation: bear 1s steps(8) infinite , center 5s forwards;
+        }
+        @keyframes bear {
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: -1600px;
+            }
+        }
+        @keyframes center {
+            0%{
+                left:0
+            }
+            100%{
+                left:50%;
+                margin-left:-100px;
+            }
+        }
+        @keyframes bg {
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: -2491px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="xiongda"></div>
+    </div>
+</body>
+</html>
